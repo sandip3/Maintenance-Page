@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+.main {
+    height: 100vh;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.m-title {
+    padding: 6vh 0;
+    font-size: 3rem;
+}
+
+.content {
+    top: 50%;
+    margin-bottom: 5vh;
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.content h1 span {
+    color: #ff3753;
+}
+
+.content p {
+    font-size: 1.5rem;
+}
+
+.launch-time {
+    display: flex;
+    justify-content: center;
+}
+
+.launch-time div {
+    flex-basis: 100px;
+    text-align: center;
+}
+
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+.contain p {
+    line-height: 50px;
+    margin: 20px 0;
+}
+
+.social {
+    margin-top: 5vh;
+}
+
+.social p {
+    font-size: 1.2rem;
+}
+
+.social .logo {
+    margin-bottom: 10px;
+}
+
+.Rocket-L,
+.Rocket-R {
+    width: 10vw;
+    position: absolute;
+    bottom: 0;
+    animation: rocket-left 5s linear infinite;
+    will-change: transform;
+}
+
+.Rocket-L {
+    left: 0;
+}
+
+.Rocket-R {
+    right: 0;
+    animation: rocket-right 7s linear infinite;
+}
+
+@keyframes rocket-left {
+    0% {
+        transform: translate(0, 100%) rotate(45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(100vw, -100vh) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rocket-right {
+    0% {
+        transform: translate(0, 100%) rotate(-45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-100vw, -100vh) rotate(-45deg);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .m-title {
+        font-size: 2.5rem;
+        padding: 5vh 0;
+        text-wrap: wrap;
+    }
+
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .contain p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .launch-time div p {
+        font-size: 40px;
+    }
+
+    .Rocket-L,
+    .Rocket-R {
+        width: 100px;
+    }
+
+    /* Rocket animations for mobile */
+    @keyframes rocket-left {
+        0% {
+            transform: translate(0, 100%) rotate(15deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translate(100vw, -100vh) rotate(15deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rocket-right {
+        0% {
+            transform: translate(0, 100%) rotate(-15deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translate(-100vw, -100vh) rotate(-15deg);
+            opacity: 1;
+        }
+    }
+}
