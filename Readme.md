@@ -22,7 +22,7 @@ This project features two "Under Maintenance" page templates for the Akshar Grou
 ### 1. **Sample 1: Full Maintenance Page**
 ![](./images/Semple%201.gif)
 
-[View Sample 1](https://sandip3.github.io/Maintenance-Page/Sample%201/index.html)
+[View Sample 1](https://sandip3.github.io/Maintenance-Page/Maintenance%20Page/Sample%201/index.html)
 - Countdown timer
 - Social media links
 - Rocket animations
@@ -31,7 +31,7 @@ This project features two "Under Maintenance" page templates for the Akshar Grou
 ### 2. **Sample 2: Simple Maintenance Page**
 ![](./images/Semple%202.gif)
 
-[View Sample 2](https://sandip3.github.io/Maintenance-Page/Sample%202/index.html)
+[View Sample 2](https://sandip3.github.io/Maintenance-Page/Maintenance%20Page/Sample%202/index.html)
 - Basic countdown timer
 - Single rocket animation
 - Simple "Learn More" button
