@@ -15,7 +15,7 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    background: url('../images/background.png');
+    background: url('../../images/background.png');
     background-position: center;
     background-size: cover;
     padding: 0 8%;

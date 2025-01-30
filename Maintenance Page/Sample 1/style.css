@@ -80,7 +80,9 @@ body {
 }
 
 .Rocket-L,
-.Rocket-R {
+.Rocket-R,
+.Rocket-L-2,
+.Rocket-R-2 {
     width: 10vw;
     position: absolute;
     bottom: 0;
@@ -92,8 +94,17 @@ body {
     left: 0;
 }
 
+.Rocket-L-2 {
+    left: 200px;
+}
+
 .Rocket-R {
     right: 0;
+    animation: rocket-right 7s linear infinite;
+}
+
+.Rocket-R-2 {
+    right: 250px;
     animation: rocket-right 7s linear infinite;
 }
 
