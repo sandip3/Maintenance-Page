@@ -15,11 +15,11 @@ body {
 }
 
 .main {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     padding: 0 20px;
     box-sizing: border-box;
-    overflow: hidden;
+
 }
 
 .m-title {
@@ -28,10 +28,7 @@ body {
 }
 
 .content {
-    top: 50%;
     margin-bottom: 5vh;
-    text-align: center;
-    color: white;
 }
 
 .content h1 {
@@ -68,7 +65,7 @@ body {
 }
 
 .social {
-    margin-top: 5vh;
+    margin: 5vh;
 }
 
 .social p {
@@ -84,18 +81,20 @@ body {
 .Rocket-L-2,
 .Rocket-R-2 {
     width: 10vw;
+    /* Keep the rocket size manageable */
     position: absolute;
     bottom: 0;
-    animation: rocket-left 5s linear infinite;
     will-change: transform;
 }
 
 .Rocket-L {
     left: 0;
+    animation: rocket-left 5s linear infinite;
 }
 
 .Rocket-L-2 {
     left: 200px;
+    animation: rocket-left 5s linear infinite;
 }
 
 .Rocket-R {
@@ -114,9 +113,14 @@ body {
         opacity: 0;
     }
 
+    50% {
+        transform: translate(50vw, -50vh) rotate(45deg);
+        opacity: 1;
+    }
+
     100% {
         transform: translate(100vw, -100vh) rotate(45deg);
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -126,14 +130,30 @@ body {
         opacity: 0;
     }
 
+    50% {
+        transform: translate(-50vw, -50vh) rotate(-45deg);
+        opacity: 1;
+    }
+
     100% {
         transform: translate(-100vw, -100vh) rotate(-45deg);
-        opacity: 1;
+        opacity: 0;
     }
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+
+
+    .main {
+
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* overflow-x: hidden;
+        overflow-x: auto; */
+        min-height: 100vh;
+    }
+
     .m-title {
         font-size: 2.5rem;
         padding: 5vh 0;
@@ -158,32 +178,44 @@ body {
     }
 
     .Rocket-L,
-    .Rocket-R {
+    .Rocket-R,
+    .Rocket-L-2,
+    .Rocket-R-2 {
         width: 100px;
     }
 
     /* Rocket animations for mobile */
     @keyframes rocket-left {
         0% {
-            transform: translate(0, 100%) rotate(15deg);
+            transform: translate(0, 100%) rotate(12deg);
             opacity: 0;
         }
 
-        100% {
-            transform: translate(100vw, -100vh) rotate(15deg);
+        50% {
+            transform: translate(50vw, -50vh) rotate(12deg);
             opacity: 1;
+        }
+
+        100% {
+            transform: translate(100vw, -100vh) rotate(12deg);
+            opacity: 0;
         }
     }
 
     @keyframes rocket-right {
         0% {
-            transform: translate(0, 100%) rotate(-15deg);
+            transform: translate(0, 100%) rotate(-12deg);
             opacity: 0;
         }
 
-        100% {
-            transform: translate(-100vw, -100vh) rotate(-15deg);
+        50% {
+            transform: translate(-50vw, -50vh) rotate(-12deg);
             opacity: 1;
+        }
+
+        100% {
+            transform: translate(-100vw, -100vh) rotate(-12deg);
+            opacity: 0;
         }
     }
 }
